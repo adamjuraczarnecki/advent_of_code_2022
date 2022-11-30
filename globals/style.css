@@ -1,0 +1,182 @@
+html {
+  display: grid;
+  place-items: center;
+  background-color: #2d2d2d;
+  color: #E7E8EC;
+}
+
+body {
+  width: 95Vw;
+  max-width: calc(700px + 4em);
+
+}
+
+header, main, footer, section, nav {
+  border: 1px solid #E7E8EC;
+  margin: 1em;
+  padding: 1em;
+}
+
+nav {
+  border-style: solid none none none;
+  margin: 1em 0 0 0;
+  padding: 1em 0 0 1em;
+}
+
+a {
+  color: #E7E8EC;
+}
+
+p, h1, h2, ul, h3 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+h3:after {
+  content: '\02795';
+  float: right;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
+li {
+  margin: 0;
+  list-style-type: '';
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+button {
+  float: right;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+}
+
+div {
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+li:before {
+  content: '*';
+  font-family: "Source Code Pro", monospace;
+  color: #ffff66;
+  font-size: 25px;
+  vertical-align: middle
+}
+
+select {
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+html {
+  display: grid;
+  place-items: center;
+  background-color: #2d2d2d;
+  color: #E7E8EC;
+}
+
+body {
+  width: 80Vw;
+  max-width: 500px;
+
+}
+
+header, main, footer, section {
+  border: 1px solid #E7E8EC;
+  margin: 1em;
+  padding: 1em;
+}
+
+a {
+  color: #E7E8EC;
+}
+
+p, h1, h2, ul, h3 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+h3:after {
+  content: '\02795';
+  float: right;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
+li {
+  margin: 0;
+  list-style-type: '';
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+button {
+  float: right;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+}
+
+div {
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+span {
+  color: #fff;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+li:before {
+  content: '*';
+  font-family: "Source Code Pro", monospace;
+  color: #ffff66;
+  font-size: 25px;
+  vertical-align: middle
+}
+
+select {
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+ul {
+  column-gap: 1em;
+  columns: 3 100px;
+  padding: 0 0 0 1em;
+}
+
+ul {
+  column-gap: 1em;
+  columns: 2 100px;
+  padding: 0 0 0 1em;
+}

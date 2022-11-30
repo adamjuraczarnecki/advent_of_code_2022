@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "gulp": "^4.0.2",
+    "gulp-string-replace": "^1.1.2"
+  }
+}
