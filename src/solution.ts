@@ -1,3 +1,4 @@
+// usefull consts
 const singleLineSplit = /\r?\n/
 const doubleLineSplit = /\r?\n\r?\n/
 
@@ -21,13 +22,13 @@ function job(input:string[]): void {
 
 document.querySelector('button').addEventListener('click', function() {
   if (document.body.contains(document.querySelector('select'))) {
-      job(document.querySelector('textarea').value.split(/\r?\n/))
+      job(document.querySelector('textarea').value.split(singleLineSplit))
   } else {
-      job(document.querySelector('textarea').value.split(/\r?\n/))
+      job(document.querySelector('textarea').value.split(singleLineSplit))
   }
 })
 
 const fileUrl = 'input.txt'
 fetch(fileUrl)
   .then( r => r.text() )
-  .then( t => job(t.split(/\r?\n/)))
+  .then( t => job(t.split(singleLineSplit)))
