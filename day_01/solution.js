@@ -8,12 +8,10 @@ function solution1(input) {
 function solution2(input) {
     let elvsCalories = input.map(x => { return x.split(singleLineSplit).reduce((a, z) => (a + parseInt(z)), 0); });
     elvsCalories = elvsCalories.sort((n1, n2) => n2 - n1);
-    console.log(elvsCalories);
     return elvsCalories[0] + elvsCalories[1] + elvsCalories[2];
 }
 // boilerprint
 function job(input) {
-    console.log(input);
     const span1 = document.querySelector('#answer1');
     span1.innerText = solution1(input).toString();
     const span2 = document.querySelector('#answer2');

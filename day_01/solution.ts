@@ -9,14 +9,12 @@ function solution1(input:string[]): (string|number){
 function solution2(input:string[]): (string|number){
   let elvsCalories: number[] = input.map(x=> {return x.split(singleLineSplit).reduce((a,z) => (a+parseInt(z)),0)})
   elvsCalories = elvsCalories.sort((n1,n2) => n2 - n1)
-  console.log(elvsCalories)
   return elvsCalories[0] + elvsCalories[1] + elvsCalories[2]
 }
 
 
 // boilerprint
 function job(input:string[]): void {
-  console.log(input)
   const span1 = document.querySelector('#answer1') as HTMLElement
   span1.innerText = solution1(input).toString()
   const span2 = document.querySelector('#answer2') as HTMLElement
