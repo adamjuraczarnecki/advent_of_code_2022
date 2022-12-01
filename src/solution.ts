@@ -1,3 +1,6 @@
+const singleLineSplit = /\r?\n/
+const doubleLineSplit = /\r?\n\r?\n/
+
 function solution1(input:string[]): string{
   return 'in progress'
 }
