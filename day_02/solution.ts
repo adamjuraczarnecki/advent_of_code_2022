@@ -60,9 +60,9 @@ function solution1(input:string[]): (string|number){
 
 function solution2(input:string[]):( string|number){
   const GameResults:Record<string, GameScore>  = {
-    'X': GameScore.lost,
-    'Y': GameScore.draw,
-    'Z': GameScore.win
+    X: GameScore.lost,
+    Y: GameScore.draw,
+    Z: GameScore.win
   }
 
   const myFigure:Record<Figure, Record<GameScore, Figure>>  = {

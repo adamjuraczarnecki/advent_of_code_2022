@@ -12,25 +12,25 @@ function solution2(input:string[]): (string|number){
 
 
 // boilerprint
-function job(input:string[]): void {
-  console.log(input)
-  const span1 = document.querySelector('#answer1') as HTMLElement
-  const answer1: (string|number) = solution1(input)
-  span1.innerText = typeof answer1 == 'number' ? answer1.toString() : answer1
-  const span2 = document.querySelector('#answer2') as HTMLElement
-  const answer2: (string|number) = solution2(input)
-  span2.innerText = typeof answer2 == 'number' ? answer2.toString() : answer2
+function job(input) {
+    const lines = input.trim().split(singleLineSplit);
+    console.log(lines);
+    const span1 = document.querySelector('#answer1');
+    const answer1 = solution1(lines);
+    span1.innerText = typeof answer1 == 'number' ? answer1.toString() : answer1;
+    const span2 = document.querySelector('#answer2');
+    const answer2 = solution2(lines);
+    span2.innerText = typeof answer2 == 'number' ? answer2.toString() : answer2;
 }
-
-document.querySelector('button').addEventListener('click', function() {
-  if (document.body.contains(document.querySelector('select'))) {
-      job(document.querySelector('textarea').value.split(singleLineSplit))
-  } else {
-      job(document.querySelector('textarea').value.split(singleLineSplit))
-  }
-})
-
-const fileUrl = 'input.txt'
+document.querySelector('button').addEventListener('click', function () {
+    if (document.body.contains(document.querySelector('select'))) {
+        job(document.querySelector('textarea').value);
+    }
+    else {
+        job(document.querySelector('textarea').value);
+    }
+});
+const fileUrl = 'input.txt';
 fetch(fileUrl)
-  .then( r => r.text() )
-  .then( t => job(t.split(singleLineSplit)))
+    .then(r => r.text())
+    .then(t => job(t));
