@@ -69,7 +69,7 @@ function solution2(input:string[]): (string|number){
 
 // boilerprint
 function job(input:string): void {
-  const lines:string[] = input.trim().split(singleLineSplit)
+  const lines:string[] = input.trim().split(doubleLineSplit)
   const span1 = document.querySelector('#answer1') as HTMLElement
   const answer1: (string|number) = solution1(lines)
   span1.innerText = typeof answer1 == 'number' ? answer1.toString() : answer1
