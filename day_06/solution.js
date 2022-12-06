@@ -12,30 +12,21 @@ function hasDuplicates(list) {
         return list.indexOf(char) !== index;
     });
 }
-function solution1(input) {
+function solution1(input, frame_length = 4) {
     const datastream = input[0].split('');
-    const datastreanLen = datastream.length;
-    for (let i = 0; i < datastreanLen - 4; i++) {
-        const frame = datastream.slice(i, i + 4);
+    const datastreanLen = datastream.length - frame_length;
+    for (let i = 0; i < datastreanLen; i++) {
+        const frame = datastream.slice(i, i + frame_length);
         // console.log(frame, !hasDuplicates(frame))
         if (!hasDuplicates(frame)) {
-            return i + 4;
+            return i + frame_length;
         }
     }
     return 'Not Found';
 }
 // same shit but frame has lenth of 14 chars
 function solution2(input) {
-    const datastream = input[0].split('');
-    const datastreanLen = datastream.length;
-    for (let i = 0; i < datastreanLen - 14; i++) {
-        const frame = datastream.slice(i, i + 14);
-        // console.log(frame, !hasDuplicates(frame))
-        if (!hasDuplicates(frame)) {
-            return i + 14;
-        }
-    }
-    return 'Not Found';
+    return solution1(input, 14);
 }
 // boilerprint
 function job(input) {

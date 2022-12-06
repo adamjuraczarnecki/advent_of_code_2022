@@ -15,14 +15,14 @@ function hasDuplicates(list: string[]): boolean{
   })
 }
 
-function solution1(input:string[]): (string|number){
+function solution1(input:string[], frame_length: number=4): (string|number){
   const datastream: string[] = input[0].split('')
-  const datastreanLen: number = datastream.length
-  for (let i:number = 0; i < datastreanLen-4; i++){
-    const frame :string[] = datastream.slice(i, i+4)
+  const datastreanLen: number = datastream.length - frame_length
+  for (let i:number = 0; i < datastreanLen; i++){
+    const frame :string[] = datastream.slice(i, i + frame_length)
     // console.log(frame, !hasDuplicates(frame))
     if (!hasDuplicates(frame)){
-      return i+4
+      return i + frame_length
     }
   }
   return 'Not Found'
@@ -30,16 +30,7 @@ function solution1(input:string[]): (string|number){
 
 // same shit but frame has lenth of 14 chars
 function solution2(input:string[]): (string|number){
-  const datastream: string[] = input[0].split('')
-  const datastreanLen: number = datastream.length
-  for (let i:number = 0; i < datastreanLen-14; i++){
-    const frame :string[] = datastream.slice(i, i+14)
-    // console.log(frame, !hasDuplicates(frame))
-    if (!hasDuplicates(frame)){
-      return i+14
-    }
-  }
-  return 'Not Found'
+    return solution1(input, 14)
 }
 
 
