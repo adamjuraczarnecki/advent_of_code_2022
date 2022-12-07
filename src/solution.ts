@@ -22,11 +22,11 @@ function job(input:string): void {
   span2.innerText = typeof answer2 == 'number' ? answer2.toString() : answer2
 }
 
-document.querySelector('button').addEventListener('click', function() {
+document.querySelector('button')!.addEventListener('click', function() {
   if (document.body.contains(document.querySelector('select'))) {
-      job(document.querySelector('textarea').value)
+      job(document.querySelector('textarea')!.value)
   } else {
-      job(document.querySelector('textarea').value)
+      job(document.querySelector('textarea')!.value)
   }
 })
 

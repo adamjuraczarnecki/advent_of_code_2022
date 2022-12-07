@@ -15,3 +15,5 @@ const formToggle = (e) => {
 }
 
 document.querySelector('section a').addEventListener('click', formToggle, true)
+
+var exports = {}
