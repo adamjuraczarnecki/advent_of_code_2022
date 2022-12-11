@@ -30,7 +30,7 @@ function render(lines) {
     console.log(lines.map(line => line.join('')).join('\n'));
 }
 function currentSprite(position) {
-    return Array(40).fill(' ').map((pixel, i) => pixel = i >= position - 1 && i <= position + 1 ? '█' : ' ').join('');
+    return Array(40).fill('.').map((pixel, i) => pixel = i >= position - 1 && i <= position + 1 ? '#' : ' ').join('');
 }
 // register sets the middle of 3 pixel wide sprite. 
 function solution2(input) {
@@ -56,7 +56,8 @@ function solution2(input) {
         }
     });
     render(screen);
-    return 'Look in console';
+    document.querySelector('#answer2').setAttribute('style', 'font-family: monospace, monospace; font-size: min(3vw, 20px)');
+    return '\n'.concat(screen.map(line => line.join('').replaceAll(' ', '\u00a0')).join('\n'));
 }
 // boilerprint
 function job(input) {
